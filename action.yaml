@@ -25,9 +25,9 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    KRUCIBLE_ACCOUNT_ID: ${{ inputs.krucible-account-id }}
-    KRUCIBLE_API_KEY_ID: ${{ inputs.krucible-api-key-id }}
-    KRUCIBLE_API_KEY_SECRET: ${{ inputs.krucible-api-key-secret }}
+    KRUCIBLE_ACCOUNTID: ${{ inputs.krucible-account-id }}
+    KRUCIBLE_APIKEYID: ${{ inputs.krucible-api-key-id }}
+    KRUCIBLE_APIKEYSECRET: ${{ inputs.krucible-api-key-secret }}
   args:
     - krucible
     - create

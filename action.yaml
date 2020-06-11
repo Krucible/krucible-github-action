@@ -1,0 +1,37 @@
+---
+name: 'Create cluster'
+description: 'Create a Krucible Kubernetes cluster'
+inputs:
+  krucible-account-id:
+    description: 'Krucible account ID'
+    required: true
+  krucible-api-key-id:
+    description: 'Krucible API key ID'
+    required: true
+  krucible-api-key-secret:
+    description: 'Krucible API key secret'
+    required: true
+  display-name:  # id of input
+    description: 'Name of cluster'
+    required: true
+  duration:  # id of input
+    description: 'Length of time in hours that the cluster should remain'
+    required: true
+    default: "1"
+outputs:
+  cluster-id:
+    description: 'ID of the cluster created in Krucible'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    KRUCIBLE_ACCOUNT_ID: ${{ inputs.krucible-account-id }}
+    KRUCIBLE_API_KEY_ID: ${{ inputs.krucible-api-key-id }}
+    KRUCIBLE_API_KEY_SECRET: ${{ inputs.krucible-api-key-secret }}
+  args:
+    - create
+    - cluster
+    - "-n"
+    - ${{ inputs.display-name }}
+    - "-d"
+    - ${{ inputs.duration }}

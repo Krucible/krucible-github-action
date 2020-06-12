@@ -36,4 +36,4 @@ jobs:
       uses: "docker://bitnami/kubectl:1.18"
       id: run-kubectl
       with:
-        args: 'kubectl get pods --all-namespaces'
+        args: 'get pods --all-namespaces'

@@ -32,7 +32,8 @@ runs:
     - krucible
     - create
     - cluster
-    - "-n"
+    - "--display-name"
     - ${{ inputs.display-name }}
-    - "-d"
+    - "--duration"
     - ${{ inputs.duration }}
+    - "--configure-kubectl"

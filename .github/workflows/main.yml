@@ -35,4 +35,5 @@ jobs:
     - name: Run a kubectl command
       uses: "bitnami/kubectl:1.18"
       id: run-kubectl
-      run: 'kubectl get pods --all-namespaces'
+      with:
+        args: 'kubectl get pods --all-namespaces'

@@ -34,6 +34,6 @@ runs:
     - cluster
     - "--display-name"
     - ${{ inputs.display-name }}
-    - "--duration"
+    - "--cluster-duration"
     - ${{ inputs.duration }}
     - "--configure-kubectl"

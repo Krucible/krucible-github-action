@@ -33,7 +33,7 @@ jobs:
         krucible-api-key-secret: ${{ secrets.KRUCIBLEAPIKEYSECRET }}
 
     - name: Run a kubectl command
-      uses: "bitnami/kubectl:1.18"
+      uses: "bitnami/kubectl@1.18"
       id: run-kubectl
       with:
         args: 'kubectl get pods --all-namespaces'

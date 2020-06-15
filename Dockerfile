@@ -8,4 +8,4 @@ RUN chmod +x /usr/local/bin/kubectl
 
 COPY ./create-cluster.sh /usr/local/bin/create-cluster.sh
 
-CMD ["/usr/local/bin/create-cluster"]
+CMD ["/usr/local/bin/create-cluster.sh"]

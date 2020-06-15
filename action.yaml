@@ -1,6 +1,7 @@
 ---
-name: 'Create cluster'
-description: 'Create a Krucible Kubernetes cluster'
+name: 'Create Kubernetes cluster'
+author: 'Krucible'
+description: 'Create a Kubernetes cluster on Krucible. See https://usekrucible.com for more.'
 inputs:
   krucible-account-id:
     description: 'Krucible account ID'
@@ -17,7 +18,7 @@ inputs:
   duration:  # id of input
     description: 'Length of time in hours that the cluster should remain'
     required: true
-    default: "1"
+    default: '1'
 outputs:
   cluster-id:
     description: 'ID of the cluster created in Krucible'
@@ -32,3 +33,6 @@ runs:
     CLUSTER_DISPLAY_NAME: ${{ inputs.display-name }}
   args:
     - create-cluster.sh
+branding:
+  color: purple
+  icon: server

@@ -30,3 +30,5 @@ runs:
     KRUCIBLE_APIKEYSECRET: ${{ inputs.krucible-api-key-secret }}
     CLUSTER_DURATION: ${{ inputs.duration }}
     CLUSTER_DISPLAY_NAME: ${{ inputs.display-name }}
+  args:
+    - create-cluster.sh

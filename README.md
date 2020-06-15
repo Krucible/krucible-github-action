@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Create a kubernetes cluster
-      uses: ./
+      uses: "Krucible/krucible-github-action@master"
       id: create-cluster
       with:
         duration: 1

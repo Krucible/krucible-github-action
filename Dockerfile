@@ -7,5 +7,6 @@ RUN wget -O /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-rel
 RUN chmod +x /usr/local/bin/kubectl
 
 COPY ./create-cluster.sh /usr/local/bin/create-cluster.sh
+RUN chmod +x /usr/local/bin/create-cluster.sh
 
 CMD ["/usr/local/bin/create-cluster.sh"]

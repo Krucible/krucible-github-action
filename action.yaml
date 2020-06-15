@@ -28,12 +28,5 @@ runs:
     KRUCIBLE_ACCOUNTID: ${{ inputs.krucible-account-id }}
     KRUCIBLE_APIKEYID: ${{ inputs.krucible-api-key-id }}
     KRUCIBLE_APIKEYSECRET: ${{ inputs.krucible-api-key-secret }}
-  args:
-    - krucible
-    - create
-    - cluster
-    - "--display-name"
-    - ${{ inputs.display-name }}
-    - "--cluster-duration"
-    - ${{ inputs.duration }}
-    - "--configure-kubectl"
+    CLUSTER_DURATION: ${{ inputs.duration }}
+    CLUSTER_DISPLAY_NAME: ${{ inputs.display-name }}
